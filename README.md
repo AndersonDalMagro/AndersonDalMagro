@@ -27,3 +27,5 @@
 </div><br/>
 
 ![Anderson Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AndersonDalMagro&hide_progress=true&theme=tokyonight)
+
+![snake gif](https://github.com/AndersonDalMagro/AndersonDalMagro/blob/output/github-contribution-grid-snake.svg)
