@@ -1,0 +1,31 @@
+name: Generate Snake Game
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Generate Snake Game from commits
+        uses: Platane/snk@master
+        id: snake
+
+      - name: Generate Snake Game animation
+        run: |
+          docker run --rm \
+          -v ${{ github.workspace }}:/data \
+          platane/snk generate --output /data/asset/snake.svg
+
+      - name: Upload Snake Game animation
+        uses: actions/upload-artifact@v2
+        with:
+          name: snake-game
+          path: asset/snake.svg
