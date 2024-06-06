@@ -5,27 +5,25 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # Executa todos os dias à meia-noite
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
       - name: Generate Snake Game from commits
-        uses: Platane/snk@master
-        id: snake
-
-      - name: Generate Snake Game animation
-        run: |
-          docker run --rm \
-          -v ${{ github.workspace }}:/data \
-          platane/snk generate --output /data/asset/snake.svg
-
-      - name: Upload Snake Game animation
-        uses: actions/upload-artifact@v2
+        uses: Platane/snk@v2
         with:
-          name: snake-game
-          path: asset/snake.svg
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          output: dist/snake.svg
+
+      - name: Push Snake Game to the output branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
