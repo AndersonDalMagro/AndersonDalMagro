@@ -1,14 +1,14 @@
 ### Olá! Eu sou o Anderson Dal Magro 👨🏼‍💻
 
 - 🌍  Caxias do Sul - RS
-- 🎂  23 anos.
+- 🎂  24 anos.
 - 💼  Desenvolvedor II na empresa Grendene.
 - 🎓  Cursando Análise e Desenvolvimento de Sistemas no IFRS - Campus Farroupilha.
 - 💡  Sempre em busca de novos desafios e oportunidades de aprendizado.
 
 #### Progresso no curso de Análise e Desenvolvimento de Sistemas:
 
-![Progresso do curso](https://progress-bar.dev/50/)
+![Progresso do curso](https://progress-bar.dev/86/)
 
 #### Entre em contato comigo através dessas redes:
 
